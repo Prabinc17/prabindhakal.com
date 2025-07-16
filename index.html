@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prabin Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(3, 3, 74);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(90deg, #2a3a57, #1f2942);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      nav .left {
+        font-size: 1.6rem;
+        color: aqua;
+        font-weight: 700;
+        text-shadow: 0 0 8px #00ffffaa;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        list-style: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s ease;
+        padding: 6px 10px;
+        border-radius: 5px;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: aqua;
+        background-color: #1a2b40;
+        box-shadow: 0 0 8px #00ffffaa;
+      }
+
+      main hr {
+        border: 0;
+        background-color: thistle;
+        height: 1px;
+        margin: 40px auto;
+        width: 80%;
+      }
+
+      .firstsection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 5%;
+        gap: 40px;
+      }
+
+      .leftsection {
+        flex: 1;
+        font-size: 2.5rem;
+      }
+
+      .leftsection .buttons {
+        margin-top: 30px;
+      }
+
+      .leftsection .btn {
+        padding: 12px 20px;
+        background: #1e2167;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-right: 10px;
+      }
+
+      .leftsection .btn:hover {
+        background-color: aqua;
+        color: #1e2167;
+      }
+
+      .rightsection {
+        flex: 1;
+        text-align: center;
+      }
+
+      .purple {
+        color: aqua;
+      }
+
+      #element {
+        color: aqua;
+        font-weight: bold;
+      }
+
+      .text-gray {
+        color: rgb(180, 180, 200);
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        display: block; /* Add this line */
+      }
+
+      .secondsection {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .secondsection h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 40px;
+        color: aqua;
+        text-shadow: 0 0 6px #00ffffcc;
+      }
+
+      .experience-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .experience-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 255, 255, 0.15);
+        padding: 20px;
+        width: 280px;
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        transition: 0.3s ease;
+      }
+
+      .experience-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+      }
+
+      .experience-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 0 10px #00ffffaa;
+        flex-shrink: 0;
+      }
+
+      .experience-content h3 {
+        margin-bottom: 6px;
+        font-size: 1.2rem;
+        color: aqua;
+        font-weight: 700;
+      }
+
+      .experience-content p {
+        font-size: 0.95rem;
+        color: #cfd8dc;
+      }
+
+      footer {
+        background: linear-gradient(180deg, #1a2431, #12202a);
+        color: #b0b8bd;
+        padding: 40px 20px 20px;
+        margin-top: 60px;
+        border-top: 2px solid #273746;
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .footer > div {
+        flex: 1 1 220px;
+      }
+
+      .footer h2,
+      .footer h3 {
+        color: aqua;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .footer p,
+      .footer ul li a {
+        font-size: 0.95rem;
+        color: #d1d9de;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer ul li {
+        margin: 8px 0;
+      }
+
+      .footer ul li a:hover {
+        color: aqua;
+        text-shadow: 0 0 6px #00ffffaa;
+      }
+
+      .footer-rights {
+        text-align: center;
+        margin-top: 30px;
+        color: #7d91a0;
+        font-size: 0.9rem;
+        padding-top: 15px;
+        border-top: 1px solid #273746;
+      }
+
+      /* Responsive Media Queries */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+
+        .firstsection {
+          flex-direction: column-reverse;
+          text-align: center;
+        }
+
+        .leftsection {
+          font-size: 2rem;
+        }
+
+        .experience-card {
+          width: 100%;
+          flex-direction: row;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer > div {
+          flex: 1 1 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .leftsection {
+          font-size: 1.8rem;
+        }
+
+        .secondsection h1 {
+          font-size: 1.5rem;
+        }
+
+        .experience-content h3 {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">Prabin's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="new.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hi, I am <span class="purple">Prabin</span>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightsection">
+          <img src="ChatGPT Image Jul 13, 2025, 07_30_34 PM.png" alt="Prabin Image" />
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="secondsection">
+        <span class="text-gray">What i have done so far</span>
+        <h1>Work Experience</h1>
+        <div class="experience-container">
+          <div class="experience-card">
+            <img class="experience-icon" src="download.jpg" alt="Video Editor Icon" />
+            <div class="experience-content">
+              <h3>Video Editor (2020-2021)</h3>
+              <p>More experience description here.</p>
+            </div>
+          </div>
+          <div class="experience-card">
+            <img class="experience-icon" src="script-logo.png" alt="Script Writer Icon" />
+            <div class="experience-content">
+              <h3>Script Writer (2021-2022)</h3>
+              <p>More experience description here.</p>
+            </div>
+          </div>
+          <div class="experience-card">
+            <img class="experience-icon" src="forntend logo.png" alt="Frontend Developer Icon" />
+            <div class="experience-content">
+              <h3>Frontend Developer (2021-2022)</h3>
+              <p>More experience description here.</p>
+            </div>
+          </div>
+          <div class="experience-card">
+            <img class="experience-icon" src="backend logo.jpg" alt="Backend Developer Icon" />
+            <div class="experience-content">
+              <h3>Backend Developer (2022-2023)</h3>
+              <p>More experience description here.</p>
+            </div>
+          </div>
+          <div class="experience-card">
+            <img class="experience-icon" src="ChatGPT Image Jul 13, 2025, 07_30_34 PM.png" alt="App Developer Icon" />
+            <div class="experience-content">
+              <h3>App Developer (2023-2024)</h3>
+              <p>More experience description here.</p>
+            </div>
+          </div>
+          <div class="experience-card">
+            <img class="experience-icon" src="full stack logo.png" alt="Fullstack Developer Icon" />
+            <div class="experience-content">
+              <h3>Frontend & Backend Developer (2024-2025)</h3>
+              <p>More experience description here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h2>Prabin's Developer Portfolio</h2>
+          <p>Crafting beautiful digital experiences with passion and precision.</p>
+        </div>
+        <div class="footer-second">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">© 2025 www.prabinportfolio.com | All rights reserved</div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Graphic Designer", "Web Designer", "Video Editor"],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
